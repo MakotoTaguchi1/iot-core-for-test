@@ -24,7 +24,8 @@ resource "aws_iot_policy" "ocpp_gateway_policy" {
         ]
         Resource = [
           "arn:aws:iot:${var.aws_region}:${data.aws_caller_identity.current.account_id}:client/${var.environment}-*",
-          "arn:aws:iot:${var.aws_region}:${data.aws_caller_identity.current.account_id}:topic/charging-stations/*"
+          "arn:aws:iot:${var.aws_region}:${data.aws_caller_identity.current.account_id}:topic/charging-stations/*",
+          "arn:aws:iot:${var.aws_region}:${data.aws_caller_identity.current.account_id}:topicfilter/charging-stations/*"
         ]
       }
     ]
