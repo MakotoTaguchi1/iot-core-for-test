@@ -18,4 +18,6 @@ terraform {
 
 provider "aws" {
   region = var.aws_region
+  # Default 以外の ローカルAWSプロファイル を利用する場合は指定する
+  # profile = "your_profile_name"
 }
